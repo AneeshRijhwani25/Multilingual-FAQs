@@ -3,31 +3,6 @@
 
 A robust **FAQ Management System** built using **Django**, **Django REST Framework**, **Redis**, and **CKEditor** for rich text editing. This system allows you to manage FAQs with multilingual support for Hindi (hi) and Bengali (bn), with dynamic translation capabilities for unsupported languages using Google Translate API. It comes with a fully functional REST API for easy integration, caching for performance, and an intuitive admin interface for ease of use.
 
-## Table of Contents
-
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-  - [Step 1: Clone the Repository](#step-1-clone-the-repository)
-  - [Step 2: Set Up a Virtual Environment](#step-2-set-up-a-virtual-environment)
-  - [Step 3: Install Dependencies](#step-3-install-dependencies)
-  - [Step 4: Configure Environment Variables](#step-4-configure-environment-variables)
-  - [Step 5: Run Migrations](#step-5-run-migrations)
-  - [Step 6: Start Redis Server](#step-6-start-redis-server)
-  - [Step 7: Run the Development Server](#step-7-run-the-development-server)
-- [API Usage](#api-usage)
-  - [List FAQs](#list-faqs)
-  - [Create a New FAQ](#create-a-new-faq)
-  - [Retrieve a Single FAQ](#retrieve-a-single-faq)
-  - [Update an FAQ](#update-an-faq)
-  - [Delete an FAQ](#delete-an-faq)
-- [Admin Panel](#admin-panel)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
-
----
 
 ## Features
 
@@ -69,7 +44,7 @@ Before you begin, ensure you have the following installed:
 ### Step 1: Clone the Repository
 Clone the project repository to your local machine:
 
-```bash
+```
 git clone https://github.com/AneeshRijhwani25/Multilingual-FAQs.git
 cd Multilingual-FAQs
 ```
@@ -77,7 +52,7 @@ cd Multilingual-FAQs
 ### Step 2: Set Up a Virtual Environment
 Create and activate a virtual environment to isolate dependencies:
 
-```bash
+```
 python -m venv venv
 venv\Scripts\activate
 ```
@@ -85,7 +60,7 @@ venv\Scripts\activate
 ### Step 3: Install Dependencies
 Install all required dependencies from `requirements.txt`:
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
@@ -102,7 +77,7 @@ REDIS_URL=redis://127.0.0.1:6379/1
 ### Step 5: Run Migrations
 Apply database migrations to set up the database schema:
 
-```bash
+```
 python manage.py makemigrations
 python manage.py migrate
 ```
@@ -110,7 +85,7 @@ python manage.py migrate
 ### Step 6: Start Redis Server
 Start the Redis server for caching:
 
-```bash
+```
 redis-server
 ```
 
@@ -119,7 +94,7 @@ If Redis is not installed, download and install it from [here](https://redis.io/
 ### Step 7: Run the Development Server
 Start the Django development server:
 
-```bash
+```
 python manage.py runserver
 ```
 
@@ -131,13 +106,13 @@ The application will be accessible at `http://localhost:8000/`.
 ### List FAQs
 Retrieve a list of FAQs with optional language selection:
 
-```http
+```
 GET /api/faqs/?lang=en
 ```
 
 Example Response:
 
-```json
+```
 [
   {
     "id": 1,
@@ -155,7 +130,7 @@ Example Response:
 ### Create a New FAQ
 Add a new FAQ:
 
-```http
+```
 POST /api/faqs/
 Content-Type: application/json
 
@@ -167,7 +142,7 @@ Content-Type: application/json
 
 Response:
 
-```json
+```
 {
   "id": 3,
   "question": "What is your favorite color?",
@@ -178,13 +153,13 @@ Response:
 ### Retrieve a Single FAQ
 Get a single FAQ with optional language translation:
 
-```http
+```
 GET /api/faqs/1/?lang=hi
 ```
 
 Example Response:
 
-```json
+```
 {
   "id": 1,
   "question": "आपका नाम क्या है?",
@@ -195,7 +170,7 @@ Example Response:
 ### Update an FAQ
 Update an existing FAQ:
 
-```http
+```
 PUT /api/faqs/1/
 Content-Type: application/json
 
@@ -207,7 +182,7 @@ Content-Type: application/json
 
 Response:
 
-```json
+```
 {
   "id": 1,
   "question": "Updated question?",
@@ -218,7 +193,7 @@ Response:
 ### Delete an FAQ
 Delete an FAQ:
 
-```http
+```
 DELETE /api/faqs/1/
 ```
 
@@ -233,7 +208,7 @@ Access the admin panel to manage FAQs:
 
 1. **Create a superuser**:
 
-```bash
+```
 python manage.py createsuperuser
 ```
 
@@ -244,7 +219,7 @@ python manage.py createsuperuser
 
 Run unit tests to ensure everything works as expected:
 
-```bash
+```
 pytest
 ```
 
