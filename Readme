@@ -95,7 +95,6 @@ Create a `.env` file in the project root directory and add the following variabl
 
 ```
 SECRET_KEY=your-secret-key-here
-DEBUG=True
 REDIS_URL=redis://127.0.0.1:6379/1
 ```
 
@@ -127,7 +126,6 @@ python manage.py runserver
 
 The application will be accessible at `http://localhost:8000/`.
 
----
 
 ## API Usage
 
@@ -229,7 +227,6 @@ Response:
 
 Status Code: **204 No Content**
 
----
 
 ## Admin Panel
 
@@ -243,7 +240,6 @@ python manage.py createsuperuser
 
 2. **Log in** to the admin site at [http://localhost:8000/admin/](http://localhost:8000/admin/).
 
----
 
 ## Testing
 
@@ -253,14 +249,6 @@ Run unit tests to ensure everything works as expected:
 pytest
 ```
 
----
 
-## Deployment
 
-To deploy the application:
-
-1. Use **Docker** for containerization (Dockerfile and docker-compose.yml are included).
-2. Deploy to platforms like **Heroku**, **AWS**, or any cloud provider supporting Python applications.
-
----
 
