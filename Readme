@@ -1,6 +1,5 @@
 # FAQ Management System
 
-![FAQ Management System](https://img.shields.io/badge/FAQ%20Management%20System-Django%20Python%20Redis-blue)
 
 A robust **FAQ Management System** built using **Django**, **Django REST Framework**, **Redis**, and **CKEditor** for rich text editing. This system allows you to manage FAQs with multilingual support for Hindi (hi) and Bengali (bn), with dynamic translation capabilities for unsupported languages using Google Translate API. It comes with a fully functional REST API for easy integration, caching for performance, and an intuitive admin interface for ease of use.
 
