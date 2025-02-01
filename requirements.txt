@@ -1,0 +1,9 @@
+Django==4.2.7
+djangorestframework==3.14.0
+django-ckeditor==6.5.1
+redis==4.5.5
+django-redis==5.2.0
+googletrans==4.0.0-rc1
+pytest==7.4.2
+pytest-django==4.5.2
+python-decouple
